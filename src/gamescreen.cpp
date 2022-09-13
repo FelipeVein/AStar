@@ -1,11 +1,7 @@
-// #define OLC_PGE_APPLICATION
-// #include "olcPixelGameEngine.h"
 #include "gamescreen.h"
 
 bool AStarScreen::OnUserUpdate(float fElapsedTime)
 {
-    // Fill(0, 0, ScreenWidth(), ScreenHeight(), L' ');
-
     // Draw Map
     // First, we will draw connections between nodes
     for (int x = 0; x < nodes.size(); x++)
@@ -32,12 +28,11 @@ bool AStarScreen::OnUserUpdate(float fElapsedTime)
 
     // Draw the beginning and end nodes of the path
     // The beginning node is green
-    
     int x1 = path[0]->x * nNodeSize + nNodeSize / 2;
     int y1 = path[0]->y * nNodeSize + nNodeSize / 2;
     FillRect(x1 - nNodeSize / 2, y1 - nNodeSize / 2, nNodeSize - nNodeBorder, nNodeSize - nNodeBorder, olc::Pixel(0, 255, 0));
-    // The end node is blue
     
+    // The end node is blue
     x1 = path[path.size() - 1]->x * nNodeSize + nNodeSize / 2;
     y1 = path[path.size() - 1]->y * nNodeSize + nNodeSize / 2;
     FillRect(x1 - nNodeSize / 2, y1 - nNodeSize / 2, nNodeSize - nNodeBorder, nNodeSize - nNodeBorder, olc::Pixel(0, 0, 255));

@@ -1,4 +1,3 @@
-// #define OLC_PGE_APPLICATION
 #ifndef GAMESCREEN_H
 #define GAMESCREEN_H
 
