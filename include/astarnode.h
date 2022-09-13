@@ -1,3 +1,6 @@
+#ifndef ASTARNODE_H
+#define ASTARNODE_H
+
 
 #include <vector>
 #include <cmath>
@@ -64,3 +67,5 @@ class AStarNode {
 
 //     return (p1.globalCostUntilSelf + p1.heuristicCostUntilGoal) < (p2.globalCostUntilSelf + p2.heuristicCostUntilGoal);
 // }
+
+#endif

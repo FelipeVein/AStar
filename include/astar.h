@@ -1,3 +1,6 @@
+#ifndef ASTAR_H
+#define ASTAR_H
+
 #include <vector>
 #include "astarnode.h"
 #include <algorithm>
@@ -19,3 +22,5 @@ class AStarAlgorithm{
             void sortOpenList() { std::sort(openList.begin(), openList.end(), [](AStarNode* a, AStarNode* b) { return a->getGlobalCost() + a->getHeuristicCost() < b->getGlobalCost() + b->getHeuristicCost(); });};
             void insertOpenList(AStarNode* node);
 };
+
+#endif
